@@ -1,1 +1,27 @@
 // Navigation Styles here
+header {
+  margin: 0 @wide-margin;
+  display: flex;
+  padding-top: @small-padding;
+  align-items: center;
+  justify-content: space-between;
+
+  @media @tablet {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    flex: 1 1 300px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 350px;
+
+    a {
+      font-size: 1.5rem;
+      color: @shark;
+      text-decoration: none;
+    }
+  }
+}
