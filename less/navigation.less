@@ -12,16 +12,24 @@ header {
   }
   h1 {
     flex: 1 1 300px;
+    @media @tablet {
+      flex: 1 1 50px;
+    }
   }
   nav {
     display: flex;
     justify-content: space-between;
     flex: 1 1 350px;
+    @media @tablet {
+      flex: 1 1 30px;
+    }
 
     a {
-      font-size: 1.5rem;
       color: @shark;
+      font-size: 1.5rem;
       text-decoration: none;
+      margin-left: 5rem;
+      align-self: center;
     }
   }
 }
