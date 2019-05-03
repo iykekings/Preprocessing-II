@@ -168,12 +168,21 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .container {
+    margin: 0 2rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: unset;
+  }
+}
 header {
-  margin: 0 5vw;
   display: flex;
-  padding-top: 1vw;
+  padding: 2rem 5vw;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px dashed grey;
 }
 @media (max-width: 768px) {
   header {
@@ -217,18 +226,12 @@ header nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
-.main-header {
-  border-top: 3px dashed grey;
+.home .main-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 3rem;
 }
-.main-header .image {
-  margin: 5vw;
-  margin-top: unset;
-}
-.main-header .image img {
+.home .main-header .image img {
   width: 100%;
   object-fit: cover;
 }
@@ -238,16 +241,43 @@ header nav a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .home .content-section {
+    flex-wrap: unset;
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+}
+@media (max-width: 768px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding-right: unset;
+    margin: 2rem 0;
+  }
 }
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width: 768px) {
+  .home .content-section .img-content {
+    width: 100%;
+    padding-left: unset;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .home .content-section .img-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -265,6 +295,11 @@ header nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 768px) {
+  .home .content-destination {
+    width: unset;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -274,7 +309,35 @@ header nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .home .content-pick {
+    padding-top: 30px;
+    border-top: 2px dashed #c0c0c0;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .home .content-pick .destination {
+    width: unset;
+  }
+}
+.home .content-pick .destination .btn {
+  align-self: start;
+  font-size: 14px;
+  color: white;
+  background-color: #03a9f4;
+  padding: 0.5em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.home .content-pick .destination .btn:hover {
+  background-color: #2ebcfc;
 }
