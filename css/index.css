@@ -217,8 +217,20 @@ header nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home {
+.main-header {
+  border-top: 3px dashed grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.main-header .image {
   margin: 5vw;
+  margin-top: unset;
+}
+.main-header .image img {
+  width: 100%;
+  object-fit: cover;
 }
 .home .content-section {
   margin: 30px 0;
